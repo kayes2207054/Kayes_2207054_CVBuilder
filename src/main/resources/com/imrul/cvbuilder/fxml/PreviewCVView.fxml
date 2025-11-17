@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.imrul.cvbuilder.controllers.PreviewCVController"
+            styleClass="root" stylesheets="@../css/styles.css">
+
+    <top>
+        <VBox styleClass="header" spacing="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Label text="CV Preview" styleClass="page-title">
+                <font>
+                    <Font name="System Bold" size="32"/>
+                </font>
+            </Label>
+            <Label text="Review your generated CV below" styleClass="page-subtitle">
+                <font>
+                    <Font size="14"/>
+                </font>
+            </Label>
+        </VBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="preview-scroll">
+            <VBox spacing="0" styleClass="cv-preview-container">
+                <padding>
+                    <Insets top="40" right="60" bottom="40" left="60"/>
+                </padding>
+
+                <!-- CV Header -->
+                <VBox spacing="10" styleClass="cv-header" alignment="CENTER">
+                    <Label fx:id="nameLabel" styleClass="cv-name">
+                        <font>
+                            <Font name="System Bold" size="36"/>
+                        </font>
+                    </Label>
+
+                    <HBox spacing="20" alignment="CENTER" styleClass="cv-contact-info">
+                        <Label fx:id="emailLabel" styleClass="contact-item">
+                            <font>
+                                <Font size="12"/>
+                            </font>
+                        </Label>
+                        <Label text="•" styleClass="separator">
+                            <font>
+                                <Font size="12"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="phoneLabel" styleClass="contact-item">
+                            <font>
+                                <Font size="12"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="addressSeparator" text="•" styleClass="separator" managed="false" visible="false">
+                            <font>
+                                <Font size="12"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="addressLabel" styleClass="contact-item" managed="false" visible="false">
+                            <font>
+                                <Font size="12"/>
+                            </font>
+                        </Label>
+                    </HBox>
+                </VBox>
+
+                <Separator styleClass="cv-separator">
+                    <VBox.margin>
+                        <Insets top="20" bottom="20"/>
+                    </VBox.margin>
+                </Separator>
+
+                <!-- Education Section -->
+                <VBox fx:id="educationSection" spacing="15" styleClass="cv-section" managed="false" visible="false">
+                    <Label text="EDUCATION" styleClass="cv-section-title">
+                        <font>
+                            <Font name="System Bold" size="20"/>
+                        </font>
+                    </Label>
+                    <VBox fx:id="educationContent" spacing="12" styleClass="cv-section-content"/>
+                </VBox>
+
+                <!-- Skills Section -->
+                <VBox fx:id="skillsSection" spacing="15" styleClass="cv-section" managed="false" visible="false">
+                    <Label text="SKILLS" styleClass="cv-section-title">
+                        <font>
+                            <Font name="System Bold" size="20"/>
+                        </font>
+                    </Label>
+                    <FlowPane fx:id="skillsContent" hgap="12" vgap="12" styleClass="cv-section-content"/>
+                </VBox>
+
+                <!-- Work Experience Section -->
+                <VBox fx:id="workExperienceSection" spacing="15" styleClass="cv-section" managed="false" visible="false">
+                    <Label text="WORK EXPERIENCE" styleClass="cv-section-title">
+                        <font>
+                            <Font name="System Bold" size="20"/>
+                        </font>
+                    </Label>
+                    <VBox fx:id="workExperienceContent" spacing="15" styleClass="cv-section-content"/>
+                </VBox>
+
+                <!-- Projects Section -->
+                <VBox fx:id="projectsSection" spacing="15" styleClass="cv-section" managed="false" visible="false">
+                    <Label text="PROJECTS" styleClass="cv-section-title">
+                        <font>
+                            <Font name="System Bold" size="20"/>
+                        </font>
+                    </Label>
+                    <VBox fx:id="projectsContent" spacing="15" styleClass="cv-section-content"/>
+                </VBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" spacing="15" styleClass="button-bar">
+            <padding>
+                <Insets top="20" right="50" bottom="20" left="50"/>
+            </padding>
+            <Button text="Back to Edit" onAction="#handleBackToEdit" styleClass="secondary-button">
+                <font>
+                    <Font size="14"/>
+                </font>
+            </Button>
+            <Button text="Create New CV" onAction="#handleCreateNew" styleClass="primary-button">
+                <font>
+                    <Font size="14"/>
+                </font>
+            </Button>
+        </HBox>
+    </bottom>
+
+</BorderPane>
