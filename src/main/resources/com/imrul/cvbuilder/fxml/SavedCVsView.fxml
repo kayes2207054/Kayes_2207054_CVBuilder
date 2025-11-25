@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.imrul.cvbuilder.controllers.SavedCVsController"
+            styleClass="root" stylesheets="@../css/styles.css">
+
+    <top>
+        <VBox styleClass="header" spacing="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Label text="Saved CVs" styleClass="page-title">
+                <font>
+                    <Font name="System Bold" size="32"/>
+                </font>
+            </Label>
+            <Label text="View, edit, or delete your saved CVs" styleClass="page-subtitle">
+                <font>
+                    <Font size="14"/>
+                </font>
+            </Label>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="20">
+            <padding>
+                <Insets top="20" right="40" bottom="20" left="40"/>
+            </padding>
+
+            <!-- Search Bar -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <TextField fx:id="searchField" promptText="Search by name..." 
+                          HBox.hgrow="ALWAYS" styleClass="search-field">
+                    <font>
+                        <Font size="14"/>
+                    </font>
+                </TextField>
+                <Button text="Search" onAction="#handleSearch" styleClass="secondary-button">
+                    <font>
+                        <Font size="14"/>
+                    </font>
+                </Button>
+                <Button text="Refresh" onAction="#handleRefresh" styleClass="secondary-button">
+                    <font>
+                        <Font size="14"/>
+                    </font>
+                </Button>
+            </HBox>
+
+            <!-- CV List -->
+            <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS" styleClass="preview-scroll">
+                <VBox fx:id="cvListContainer" spacing="15" styleClass="cv-list-container">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                    <Label fx:id="noCVsLabel" text="No saved CVs found. Create your first CV!" 
+                           styleClass="no-cvs-label" visible="false" managed="false">
+                        <font>
+                            <Font size="16"/>
+                        </font>
+                    </Label>
+                </VBox>
+            </ScrollPane>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" spacing="15" styleClass="button-bar">
+            <padding>
+                <Insets top="20" right="50" bottom="20" left="50"/>
+            </padding>
+            <Button text="Back to Home" onAction="#handleBackToHome" styleClass="secondary-button">
+                <font>
+                    <Font size="14"/>
+                </font>
+            </Button>
+            <Button text="Create New CV" onAction="#handleCreateNew" styleClass="primary-button">
+                <font>
+                    <Font size="14"/>
+                </font>
+            </Button>
+        </HBox>
+    </bottom>
+
+</BorderPane>

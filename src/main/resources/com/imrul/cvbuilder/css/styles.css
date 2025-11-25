@@ -1,0 +1,330 @@
+/*
+ * Professional CV Builder Stylesheet
+ * Theme: Modern Professional Blue
+ */
+
+/* Root and General Styles */
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-background-color: #f5f7fa;
+}
+
+/* Home Screen Styles */
+.home-container {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #f8f9fa);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 20, 0, 0, 5);
+    -fx-background-radius: 15;
+    -fx-padding: 50;
+}
+
+.title {
+    -fx-text-fill: #2c3e50;
+}
+
+.subtitle {
+    -fx-text-fill: #3498db;
+}
+
+.welcome-text {
+    -fx-text-fill: #7f8c8d;
+    -fx-text-alignment: center;
+}
+
+/* Header Styles */
+.header {
+    -fx-background-color: linear-gradient(to right, #3498db, #2980b9);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 3);
+}
+
+.page-title {
+    -fx-text-fill: white;
+}
+
+.page-subtitle {
+    -fx-text-fill: #ecf0f1;
+}
+
+/* Button Styles */
+.primary-button {
+    -fx-background-color: linear-gradient(to bottom, #3498db, #2980b9);
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(41, 128, 185, 0.4), 10, 0, 0, 3);
+    -fx-font-weight: bold;
+}
+
+.primary-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #2980b9, #21618c);
+    -fx-effect: dropshadow(gaussian, rgba(41, 128, 185, 0.6), 15, 0, 0, 5);
+    -fx-scale-y: 1.02;
+    -fx-scale-x: 1.02;
+}
+
+.primary-button:pressed {
+    -fx-background-color: #21618c;
+    -fx-effect: dropshadow(gaussian, rgba(41, 128, 185, 0.3), 5, 0, 0, 1);
+}
+
+.secondary-button {
+    -fx-background-color: linear-gradient(to bottom, #ecf0f1, #bdc3c7);
+    -fx-text-fill: #2c3e50;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 2);
+    -fx-font-weight: bold;
+}
+
+.secondary-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #bdc3c7, #95a5a6);
+}
+
+.secondary-button:pressed {
+    -fx-background-color: #95a5a6;
+}
+
+.add-button {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-font-size: 12px;
+    -fx-padding: 5 15 5 15;
+}
+
+.add-button:hover {
+    -fx-background-color: #229954;
+}
+
+/* Form Styles */
+.form-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.form-container {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 15, 0, 0, 5);
+}
+
+.section {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1 0;
+}
+
+.section-header {
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: bold;
+}
+
+.field-label {
+    -fx-text-fill: #34495e;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.input-field {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 8;
+    -fx-font-size: 13px;
+}
+
+.input-field:focused {
+    -fx-border-color: #3498db;
+    -fx-border-width: 2;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.3), 5, 0, 0, 0);
+}
+
+.text-area {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 8;
+}
+
+.text-area:focused {
+    -fx-border-color: #3498db;
+    -fx-border-width: 2;
+    -fx-background-color: white;
+}
+
+/* Button Bar */
+.button-bar {
+    -fx-background-color: #ecf0f1;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1 0 0 0;
+}
+
+/* CV Preview Styles */
+.preview-scroll {
+    -fx-background-color: #ecf0f1;
+    -fx-background: #ecf0f1;
+}
+
+.cv-preview-container {
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 20, 0, 0, 5);
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1;
+    -fx-max-width: 850;
+}
+
+.cv-header {
+    -fx-background-color: #ffffff;
+    -fx-padding: 40 50 30 50;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 2 0;
+}
+
+.cv-name {
+    -fx-text-fill: #1a1a1a;
+    -fx-font-weight: bold;
+    -fx-font-size: 38px;
+}
+
+.cv-contact-info {
+    -fx-padding: 15 0 0 0;
+}
+
+.contact-item {
+    -fx-text-fill: #555555;
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+}
+
+.separator {
+    -fx-text-fill: #cccccc;
+    -fx-font-weight: normal;
+}
+
+.cv-separator {
+    -fx-background-color: #2c3e50;
+    -fx-pref-height: 1;
+}
+
+.cv-section {
+    -fx-padding: 30 0 25 0;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+}
+
+.cv-section-title {
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 12 0;
+    -fx-border-color: #2c3e50;
+    -fx-border-width: 0 0 2 0;
+}
+
+.cv-section-content {
+    -fx-padding: 20 0 0 0;
+}
+
+/* Separator */
+Separator {
+    -fx-background-color: #e0e0e0;
+}
+
+/* ScrollPane */
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .content {
+    -fx-background-color: transparent;
+}
+
+/* ScrollBar Styling */
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #bdc3c7;
+    -fx-background-radius: 5;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #95a5a6;
+}
+
+.scroll-bar .thumb:pressed {
+    -fx-background-color: #7f8c8d;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+/* Alert Dialogs */
+.alert {
+    -fx-background-color: white;
+}
+
+.alert .header-panel {
+    -fx-background-color: #3498db;
+}
+
+.alert .header-panel .label {
+    -fx-text-fill: white;
+}
+
+/* Saved CVs View Styles */
+.search-field {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+    -fx-pref-width: 400;
+}
+
+.search-field:focused {
+    -fx-border-color: #3498db;
+    -fx-border-width: 2;
+    -fx-background-color: white;
+}
+
+.cv-list-container {
+    -fx-background-color: transparent;
+}
+
+.no-cvs-label {
+    -fx-text-fill: #7f8c8d;
+    -fx-font-size: 16px;
+    -fx-padding: 50;
+    -fx-alignment: center;
+}
+
+/* Progress Indicator */
+.progress-indicator {
+    -fx-progress-color: #3498db;
+}

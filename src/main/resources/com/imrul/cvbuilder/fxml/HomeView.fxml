@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.imrul.cvbuilder.controllers.HomeController"
+            styleClass="root" stylesheets="@../css/styles.css">
+
+    <center>
+        <VBox alignment="CENTER" spacing="30" styleClass="home-container">
+            <padding>
+                <Insets top="50" right="50" bottom="50" left="50"/>
+            </padding>
+
+            <Label text="CV Builder Application" styleClass="title">
+                <font>
+                    <Font name="System Bold" size="48"/>
+                </font>
+            </Label>
+
+            <Label text="Create Your Professional Curriculum Vitae" styleClass="subtitle">
+                <font>
+                    <Font size="20"/>
+                </font>
+            </Label>
+
+            <Label text="Welcome to the CV Builder! This application helps you create a professional CV by guiding you through a simple form. Click the button below to get started."
+                   wrapText="true" maxWidth="600" styleClass="welcome-text" textAlignment="CENTER">
+                <font>
+                    <Font size="14"/>
+                </font>
+            </Label>
+
+            <Button text="Create New CV" onAction="#handleCreateNewCV" styleClass="primary-button">
+                <font>
+                    <Font size="16"/>
+                </font>
+                <padding>
+                    <Insets top="15" right="40" bottom="15" left="40"/>
+                </padding>
+            </Button>
+
+            <Button text="View Saved CVs" onAction="#handleViewSavedCVs" styleClass="secondary-button">
+                <font>
+                    <Font size="16"/>
+                </font>
+                <padding>
+                    <Insets top="15" right="40" bottom="15" left="40"/>
+                </padding>
+            </Button>
+        </VBox>
+    </center>
+
+</BorderPane>
